@@ -1,0 +1,55 @@
+<view class="movie">
+  <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+    <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+      <view class="swiper-item">
+        <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+        <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="list">
+    <view class="search" wx:for="{{search}}" wx:key="">
+      <view class="border">
+        <view class="name1 name">{{item.name1}}</view>
+        <view class="name2 name">{{item.name2}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 精彩视频 -->
+  <view class="header">精彩视频</view>
+  <!-- <card2 mvId="{{mvId}}"></card2> -->
+  <!-- pages/stories/index.wxml -->
+  <view class="cards">
+    <view class="card" wx:for="{{entities}}" wx:key="index">
+      <video src="{{item.video}}" hidden="{{currentVid !== item.id}}" id="{{item.id}}" duration="{{item.duration_raw}}" poster="{{item.image}}" />
+      <image data-vid="{{item.id}}" src="{{item.image}}" hidden="{{currentVid == item.id}}" bindtap="play">
+        <view class="label">{{item.duration}}</view>
+      </image>
+      
+      <!-- 内容 -->
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="content flex-sub">
+
+            <view class="text-gray text-sm flex justify-between">
+              {{item.header}}
+              <view class="text-gray text-sm">
+                <text class="cuIcon-appreciatefill margin-lr-xs"></text>
+                20
+                <text class="cuIcon-messagefill margin-lr-xs"></text>
+                30
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <navigator url="/pages/show/index">
+        <view class="content">
+          <view class="description">{{item.description}}</view>
+          <view class="meta">{{item.meta.price}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

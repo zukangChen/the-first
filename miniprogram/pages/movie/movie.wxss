@@ -1,0 +1,75 @@
+/* miniprogram/pages/movie/movie.wxss */
+.list{
+  display: flex;
+}
+.search{
+  flex:1;
+  
+}
+.border{
+  height: 100px;
+  border:3px solid #ff7e00;
+  margin-right: 10rpx;
+  text-align: center;
+  margin: auto;
+  margin-right: 10rpx;
+}
+.name{
+  color:#ff7e00;
+  font-size: 36rpx;
+}
+.name1{
+   margin-top: 35px;
+}
+.header{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+/* pages/stories/index.wxss */
+.cards {
+  padding: 16px;
+}
+
+.card {
+  background: #fff;
+  margin-bottom: 16px;
+  transition: 0.5s all;
+}
+
+.card.hover {
+  box-shadow: 0 32px 48px rgba(0, 0, 0, 0.06);
+}
+
+.card image {
+  position: relative;
+}
+/* video 时长 */
+.card .label {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 24rpx;
+  padding: 4rpx 8rpx;
+  background: rgba(0, 0, 0, 0.85);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+}
+
+.card image, .card video {
+  height: 36vh;
+}
+.text-sm{
+  color: black;
+}
+.description{
+  color:var(--gray);
+}
+.cu-list.menu-avatar>.cu-item{
+  height: 80rpx;
+  border-bottom: 1rpx solid #cfcfcf;
+}
+.content{
+  margin: 10rpx;
+}
