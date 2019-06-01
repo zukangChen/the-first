@@ -1,2 +1,12 @@
 <!--miniprogram/pages/mine/mine.wxml-->
-<text>miniprogram/pages/mine/mine.wxml</text>
+<view class='main'>
+  <view class='mine'>
+  <view class='kong'></view>
+    <view class='mineimg'>
+      <image src=''></image>
+    </view>
+    <view class='minename'>
+      <text></text>
+    </view>
+  </view>
+</view>
