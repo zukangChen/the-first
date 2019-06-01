@@ -37,13 +37,13 @@ page{
 }
 .diandan{
   margin:auto;
-  height: 80rpx;
+  height: 100rpx;
   width: 650rpx;
   background: #f17c0e;
   border-radius: 10rpx;
   text-align: center;
   color: #ffffff;
-  font-size: 30rpx;
+  font-size: 40rpx;
 }
 .kong1{
   height: 60rpx;
