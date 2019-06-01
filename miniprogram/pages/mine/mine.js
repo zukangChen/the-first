@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    nickName:'',
+    avatarUrl:''
 
   },
 
@@ -12,6 +14,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    //获取用户头像与昵称
+    wx.getUserInfo({
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          nickName: res.userInfo.nickName,
+          avatarUrl: res.userInfo.avatarUrl,
+        })
+      },
+    })
+
 
   },
 

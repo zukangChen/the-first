@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="img">
+    <image src="../../images/coco.png" class="coco"></image>
+    <text class="title"></text>
+  </view>
+  <view class="content">
+    <text></text>
+  </view>
+</view>

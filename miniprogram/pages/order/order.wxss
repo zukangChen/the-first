@@ -1,1 +1,50 @@
 /* miniprogram/pages/order/order.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+.main{
+  height: 100%;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+.kongorder-box{
+  width: 100%;
+  height: 500rpx;
+  /* background: green; */
+}
+.kong{
+  height: 50rpx;
+}
+.kongorder{
+  width: 650rpx;
+  height: 400rpx;
+  background: #ffffff;
+  margin:0 50rpx 50rpx 50rpx;
+  border-radius: 10rpx;
+}
+.ordertip{
+  padding: 180rpx 150rpx;
+  height: 40rpx;
+  width: 350rpx;
+  text-align: center;
+  font-size: 35rpx;
+  color: #a0a0a0;
+}
+.diandan-box{
+  height: 140rpx;
+  /* background: green; */
+}
+.diandan{
+  margin:auto;
+  height: 100rpx;
+  width: 650rpx;
+  background: #f17c0e;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #ffffff;
+  font-size: 40rpx;
+}
+.kong1{
+  height: 60rpx;
+}

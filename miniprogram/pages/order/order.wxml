@@ -1,2 +1,17 @@
 <!--miniprogram/pages/order/order.wxml-->
-<text>miniprogram/pages/order/order.wxml</text>
+<view class='main'>
+<view class='kongorder-box'>
+  <view class='kong'></view>
+  <view class='kongorder'>
+    <view class='ordertip'>
+      <text>暂无订单信息</text>
+    </view>
+  </view>
+  </view>
+  <view class='diandan-box'>
+    <view class='kong1'></view>
+    <button class='diandan'>
+      开 始 点 单
+    </button> 
+  </view>
+</view>

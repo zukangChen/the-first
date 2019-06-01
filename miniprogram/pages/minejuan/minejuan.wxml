@@ -1,0 +1,10 @@
+<!--miniprogram/pages/minejuan/minejuan.wxml-->
+<view class='main'>
+  <view class='juanlist'>
+    <view class='juan'>
+      <view class='juantext'>
+        <text>暂无可用优惠券</text>
+      </view>
+    </view>
+  </view>
+</view>

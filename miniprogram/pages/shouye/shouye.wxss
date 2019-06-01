@@ -1,1 +1,40 @@
-/* miniprogram/pages/shouye/shouye.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+}
+.swiper{
+  width: 100%;
+}
+.swiper image{
+  width: 100%;
+}
+.btn{
+  width: 100%;
+  height: 260rpx;
+  text-align: center;
+}
+.btn .order{
+  width: 60%;
+  margin: 70rpx auto;
+  color: #ff7e00;
+}
+.btn .order .weui-btn{
+  border: 1px solid #ff7e00;
+  color: #ff7e00;
+}
+.chooses{
+  width: 100%;
+}
+.chooses .weui-cell__bd{
+  font-size: 16px;
+  color: #606060;
+}
+.advertising{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 240rpx;
+}
+.advertising .adver-img{
+  width: 100%;
+  height: 100%;
+}

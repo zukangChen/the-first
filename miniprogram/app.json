@@ -3,8 +3,12 @@
     "pages/movie/movie",
     "pages/shouye/shouye",
     "pages/order/order",
-    "pages/mine/mine"
-    
+    "pages/mine/mine",
+    "pages/mine/mine",
+    "pages/wallet/wallet",
+    "pages/minejuan/minejuan",
+    "pages/minexuzhi/minexuzhi",
+    "pages/minedizhi/minedizhi"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

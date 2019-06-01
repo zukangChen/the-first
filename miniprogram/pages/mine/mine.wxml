@@ -1,2 +1,51 @@
 <!--miniprogram/pages/mine/mine.wxml-->
-<text>miniprogram/pages/mine/mine.wxml</text>
+<view class='main'>
+  <view class='mine'>
+    <view class='kong'></view>
+    <view class='mineimg'>
+      <image src='{{avatarUrl}}'></image>
+    </view>
+    <view class='minename'>
+      <text>{{nickName}}</text>
+    </view>
+  </view>
+  <view class='list-box'>
+    <!-- <view class="weui-cells weui-cells_after-title"> -->
+    <navigator url="/pages/minejuan/minejuan" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/images/mine-youhuijuan.png" style="margin-right:5px;vertical-align: middle;width:35px; height: 35px;"></image>
+      </view>
+      <view class="weui-cell__bd">我的优惠</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/images/mine-shouji.png" style="margin-right:5px;vertical-align: middle;width:35px; height: 35px;"></image>
+      </view>
+      <view class="weui-cell__bd">我的号码</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/images/mine-xuzhi.png" style="margin-right:5px;vertical-align: middle;width:35px; height: 35px;"></image>
+      </view>
+      <view class="weui-cell__bd">平台须知</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/images/mine-qianbao.png" style="margin-right:5px;vertical-align: middle;width:35px; height: 35px;"></image>
+      </view>
+      <view class="weui-cell__bd">CoCo钱包</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="/pages/minedizhi/minedizhi" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/images/mine-dizhi.png" style="margin-right:5px;vertical-align: middle;width:35px; height: 35px;"></image>
+      </view>
+      <view class="weui-cell__bd">我的收货地址</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+  <!-- </view> -->
+</view>

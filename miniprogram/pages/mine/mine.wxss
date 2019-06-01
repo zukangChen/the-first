@@ -1,1 +1,43 @@
 /* miniprogram/pages/mine/mine.wxss */
+page{
+  height: 100%;
+  width: 100%
+}
+.main{
+  height: 100%;
+  width: 100%;
+  background: #f1f1f1;
+}
+.mine{
+  height: 430rpx;
+  width: 100%;
+}
+.mineimg{
+  height: 250rpx;
+  width: 250rpx;
+  border-radius: 125rpx;
+  background: green;
+  margin:  0 250rpx 20rpx 250rpx;
+  overflow: hidden;
+}
+.kong{
+  height: 60rpx;
+}
+.mineimg image{
+  width: 100%;
+  height: 100%;
+}
+.minename{
+  height: 100rpx;
+  width: 100%;
+  text-align: center;
+  /* background: red; */
+}
+.list-box{
+  width: 680rpx;
+  /* height: 500rpx; */
+  margin:0 25rpx;
+  background:#ffffff;
+  border-radius: 10rpx;
+  padding:10rpx;
+}
