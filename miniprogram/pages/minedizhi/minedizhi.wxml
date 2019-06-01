@@ -1,0 +1,15 @@
+<!--miniprogram/pages/minedizhi/minedizhi.wxml-->
+<view class='main'>
+  <view class='main-bd'>
+    <view class='kong'></view>
+    <view class='cocoimg'>
+      <image src='/images/coco.png'></image>
+    </view>
+    <view class='coconame'>
+      <text>CoCo都可</text>
+    </view>
+  </view>
+  <view class='dizhitip'>
+      <text>暂无可用地址</text>
+  </view>
+</view>
