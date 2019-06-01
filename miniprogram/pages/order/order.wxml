@@ -3,7 +3,7 @@
 <view class='kongorder-box'>
   <view class='kong'></view>
   <view class='kongorder'>
-    <view class='ordertip'>
+    <view class='ordertip' style="width:350rpx;height:40rpx;">
       <text>暂无订单信息</text>
     </view>
   </view>
