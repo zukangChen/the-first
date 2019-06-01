@@ -3,9 +3,9 @@
 <view class='kongorder-box'>
   <view class='kong'></view>
   <view class='kongorder'>
-    <view class='ordertip'>
+    
       <text>暂无订单信息</text>
-    </view>
+    
   </view>
   </view>
   <view class='diandan-box'>
