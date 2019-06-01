@@ -3,7 +3,13 @@
     "pages/shouye/shouye",
     "pages/order/order",
     "pages/mine/mine",
+<<<<<<< HEAD
     "pages/wallet/wallet"
+=======
+    "pages/minejuan/minejuan",
+    "pages/minexuzhi/minexuzhi",
+    "pages/minedizhi/minedizhi"
+>>>>>>> 9ab3d8dc8685c3cad7b7623298b3c7934bf71046
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
