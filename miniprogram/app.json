@@ -5,22 +5,12 @@
     }
   },
   "pages": [
-<<<<<<< HEAD
-        "pages/order/order",
-=======
-<<<<<<< HEAD
-    "pages/category/category",
-=======
-<<<<<<< HEAD
-    "pages/location/location",
-=======
-       
->>>>>>> 95e4c457ec07922480e18e74223b00453c83e355
->>>>>>> 03ddec0eedfcfc1a53f74db3ca335fc08b994459
-    "pages/shouye/shouye",
-    "pages/location/location",
-    "pages/movie/movie",
+        "pages/category/category",
+   "pages/order/order",
 
+    "pages/location/location",
+    "pages/shouye/shouye",
+    "pages/movie/movie",
     "pages/mine/mine",
     "pages/wallet/wallet",
     "pages/minejuan/minejuan",
