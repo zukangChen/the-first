@@ -12,13 +12,17 @@
   <view class="btn btn1" bindtap="change1">
     <view class="content">
       <view class="nearShop {{cur == 0 ? 'color' : ''}}">定位附近的门店</view>
-      <view class="icon"></view>
+      <view class="icon">
+        <image src="../../images/aim-selected.png" />
+      </view>
     </view>
   </view>
   <view class="btn btn2" bindtap="change2">
     <view class="content">
       <view class="collectShop {{cur == 1 ? 'color': ''}}">收藏的门店</view>
-      <view class="icon"></view>
+      <view class="icon">
+        <image src="../../images/star.png" />
+      </view>
     </view>
   </view>
 </view>
@@ -38,12 +42,13 @@
      <view class="bottom bottom1">
       <view class="icon"></view>
       <view class="shopName">现在,支付成功后在店内取单</view>
-      <view class="long">2.18km</view>
+      <view class="long">
+        <image src="../../images/star-hover.png" />
+      </view>
     </view>
     <view class="bottom bottom1">
       <view class="icon"></view>
       <view class="shopName">稍后,预约稍晚到店取单</view>
-      <view class="long">2.18km</view>
     </view>
     <view class="button" bindtap ="order">选择饮品</view>
   </view>
