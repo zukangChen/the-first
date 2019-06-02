@@ -1,36 +1,24 @@
 {
   "permission": {
-
     "scope.userLocation": {
-
       "desc": "你的位置信息将用于小程序位置接口的效果展示"
-
     }
-
-},
+  },
   "pages": [
-<<<<<<< HEAD
+        "pages/order/order",
+    "pages/shouye/shouye",
     "pages/location/location",
-=======
-       
-    "pages/shouye/shouye",
->>>>>>> 181edca408645d0803ac2a2c1335cdce58e5a5a8
     "pages/movie/movie",
-    "pages/shouye/shouye",
-    "pages/order/order",
+
     "pages/mine/mine",
     "pages/wallet/wallet",
     "pages/minejuan/minejuan",
     "pages/minexuzhi/minexuzhi",
     "pages/minedizhi/minedizhi",
-<<<<<<< HEAD
     "pages/explore/explore",
     "pages/share/share",
-    "pages/transmit/transmit"
-    
-=======
+    "pages/transmit/transmit",
     "pages/mineshouji/shouji"
->>>>>>> 181edca408645d0803ac2a2c1335cdce58e5a5a8
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
