@@ -138,7 +138,7 @@ movable-view.indexBar-item::before {
 .header .btn .content,.bottom{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
 }
 .bottom .long{
   width: 106rpx;
