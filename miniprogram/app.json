@@ -1,13 +1,16 @@
 {
   "pages": [
-    "pages/shouye/shouye",
     "pages/movie/movie",
+    "pages/shouye/shouye",
     "pages/order/order",
     "pages/mine/mine",
     "pages/wallet/wallet",
     "pages/minejuan/minejuan",
     "pages/minexuzhi/minexuzhi",
-    "pages/minedizhi/minedizhi"
+    "pages/minedizhi/minedizhi",
+    "pages/explore/explore",
+    "pages/share/share",
+    "pages/transmit/transmit"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

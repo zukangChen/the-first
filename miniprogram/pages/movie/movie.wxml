@@ -8,7 +8,7 @@
     </swiper-item>
   </swiper>
   <view class="list">
-    <view class="search" wx:for="{{search}}" wx:key="">
+    <view class="search" wx:for="{{search}}" wx:key="" bindtap="click" data-page="{{index}}">
       <view class="border">
         <view class="name1 name">{{item.name1}}</view>
         <view class="name2 name">{{item.name2}}</view>
@@ -17,39 +17,8 @@
   </view>
   <!-- 精彩视频 -->
   <view class="header">精彩视频</view>
-  <!-- <card2 mvId="{{mvId}}"></card2> -->
+  <card2 ></card2>
   <!-- pages/stories/index.wxml -->
-  <view class="cards">
-    <view class="card" wx:for="{{entities}}" wx:key="index">
-      <video src="{{item.video}}" hidden="{{currentVid !== item.id}}" id="{{item.id}}" duration="{{item.duration_raw}}" poster="{{item.image}}" />
-      <image data-vid="{{item.id}}" src="{{item.image}}" hidden="{{currentVid == item.id}}" bindtap="play">
-        <view class="label">{{item.duration}}</view>
-      </image>
-      
-      <!-- 内容 -->
-      <view class="cu-list menu-avatar">
-        <view class="cu-item">
-          <view class="content flex-sub">
-
-            <view class="text-gray text-sm flex justify-between">
-              {{item.header}}
-              <view class="text-gray text-sm">
-                <text class="cuIcon-appreciatefill margin-lr-xs"></text>
-                20
-                <text class="cuIcon-messagefill margin-lr-xs"></text>
-                30
-              </view>
-            </view>
-          </view>
-        </view>
-      </view>
-
-      <navigator url="/pages/show/index">
-        <view class="content">
-          <view class="description">{{item.description}}</view>
-          <view class="meta">{{item.meta.price}}</view>
-        </view>
-      </navigator>
-    </view>
-  </view>
+  
 </view>
+
