@@ -1,0 +1,50 @@
+<!-- miniprogram/pages/location/location.wxml -->
+<view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}px;">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="{{addInfo.result.address}}" confirm-type="search"></input>
+  </view>
+  <view class="action" bindtap="search">
+    <button class="cu-btn bg-gradual-green shadow-blur round" >搜索</button>
+  </view>
+</view>
+<view class="header">
+  <view class="btn btn1" bindtap="change1">
+    <view class="content">
+      <view class="nearShop {{cur == 0 ? 'color' : ''}}">定位附近的门店</view>
+      <view class="icon"></view>
+    </view>
+  </view>
+  <view class="btn btn2" bindtap="change2">
+    <view class="content">
+      <view class="collectShop {{cur == 1 ? 'color': ''}}">收藏的门店</view>
+      <view class="icon"></view>
+    </view>
+  </view>
+</view>
+<view class="content">
+  <view class="item" wx:for="{{info}}" wx:key="">
+    <view class="top">
+      <view class="icon"></view>
+      <view class="shopName">{{item.title}}</view>
+      <view class="long">2.18km</view>
+    </view>
+    <view class="address">南昌市</view>
+    <view class="middle">
+      <view class="get">到店自提:</view>
+      <view class="detail">门店详情</view>
+      <view class="box"></view>
+    </view>
+     <view class="bottom bottom1">
+      <view class="icon"></view>
+      <view class="shopName">现在,支付成功后在店内取单</view>
+      <view class="long">2.18km</view>
+    </view>
+    <view class="bottom bottom1">
+      <view class="icon"></view>
+      <view class="shopName">稍后,预约稍晚到店取单</view>
+      <view class="long">2.18km</view>
+    </view>
+    <view class="button">选择饮品</view>
+  </view>
+</view>

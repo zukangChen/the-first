@@ -1,5 +1,15 @@
 {
+  "permission": {
+
+    "scope.userLocation": {
+
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+
+    }
+
+},
   "pages": [
+    "pages/location/location",
     "pages/movie/movie",
     "pages/shouye/shouye",
     "pages/order/order",
@@ -11,6 +21,7 @@
     "pages/explore/explore",
     "pages/share/share",
     "pages/transmit/transmit"
+    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
