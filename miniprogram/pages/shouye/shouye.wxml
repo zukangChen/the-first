@@ -9,35 +9,36 @@
     </swiper>
   </view>
   <view class="btn">
-    <view class="order">
-      <button class="weui-btn" type="default" plain="true">按钮</button>
+    <view class="order"> 
+      <button class="weui-btn" type="default" plain="true" bindtap="goOrder">自助点单</button>
     </view>
   </view>
   <view class="chooses">
     <view class="weui-cells weui-cells_after-title">
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__hd">
-                    <image src="../../images/time.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-                </view>
-                <view class="weui-cell__bd">限时拼团</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-            </navigator>
-            <navigator url="/pages/movie/movie" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__hd">
-                    <image src="../../images/camera.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-                </view>
-                <view class="weui-cell__bd">都可影院</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-            </navigator>
-            <navigator url="/pages/wallet/wallet" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__hd">
-                    <image src="../../images/qianbao.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-                </view>
-                <view class="weui-cell__bd">CoCo钱包</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-            </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <image src="../../images/time.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
         </view>
+        <view class="weui-cell__bd">限时拼团</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+        <navigator url="/pages/movie/movie" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/camera.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+          </view>
+          <view class="weui-cell__bd">都可影院</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="/pages/wallet/wallet" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/qianbao.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+          </view>
+          <view class="weui-cell__bd">CoCo钱包</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+    </view>
   </view>
+  
   <view class="advertising">
     <image src="{{adver_img}}" class="adver-img"></image>
   </view>

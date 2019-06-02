@@ -1,19 +1,16 @@
 {
   "permission": {
-
     "scope.userLocation": {
-
       "desc": "你的位置信息将用于小程序位置接口的效果展示"
-
     }
-
-},
+  },
   "pages": [
 
     "pages/location/location",
-    "pages/shouye/shouye",
     "pages/movie/movie",
     "pages/order/order",
+    "pages/shouye/shouye",
+    "pages/category/category",
     "pages/mine/mine",
     "pages/wallet/wallet",
     "pages/minejuan/minejuan",

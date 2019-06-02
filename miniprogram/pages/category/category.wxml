@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="imgs">
+    <image src="{{imgs}}"></image>
+  </view>
+  <view class="container-buttom">
+    <view class="category-left">
+      <view wx:for="{{category}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" class="cate-list {{curIndex === index ? 'on' : ''}}" bindtap="switchTab">
+        {{item.name}}
+      </view>
+    </view>
+    <scroll-view class="categroy-right" scroll-y scroll-into-view="{{toView}}" scroll-with-animation="{{true}}" bindscroll="switchTabs">
+      <block wx:for="{{detail}}" wx:key="{{item.id}}">
+        <view class="product-title">{{item.cate}}</view>
+        <view class="cate-box" id="{{item.id}}">
+          <view class="cate-list" wx:for="{{item.detail}}" wx:key="index" wx:for-item="product">
+            <navigator url="#" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                <image class="weui-media-box__thumb" src="{{product.thumb}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                <view class="weui-media-box__title">{{product.name}}</view>
+                <view class="weui-media-box__desc">{{product.price}}</view>
+                <image class="sub" src="../../images/sub.png" data-id="{{item.id}}" data-index="{{index}}" bindtap="sub"></image>
+                <text class="number">{{product.number}}</text>
+                <image class="add" src="../../images/add.png" data-id="{{item.id}}" data-index="{{index}}" bindtap="add"></image>
+            </view>
+          </navigator>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+    <view class="button" bindtap="goPay">
+      <button class="weui-btn mini-btn" type="warn" size="mini">去结算</button>
+    </view>
+  </view>
+</view>

@@ -5,6 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
+    hid:true,
+    orderlist:[
+      {
+        image:'/images/coco.png',
+        title:'coco奶茶',
+        number:'1',
+        price:'18'
+      }
+    ]
+
+  },
+  toDiandan: function (e) {
+    console.log('跳转首页点单！');
+    wx.switchTab({
+      url: '/pages/shouye/shouye',
+    })
+  },
+  minusCount:function(e){
+    // let number = e.
+  },
+  addCount:function(){
 
   },
 
