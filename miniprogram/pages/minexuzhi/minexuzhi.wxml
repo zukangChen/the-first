@@ -1,2 +1,119 @@
 <!--miniprogram/pages/minexuzhi/minexuzhi.wxml-->
-<text>miniprogram/pages/minexuzhi/minexuzhi.wxml</text>
+<view class='main'>
+  <view class='xuzhitop'>
+    <view class='xuzhitext'>
+      <view class='xuzhitip'>
+        <text>手机自助点单平台是“CoCo都可 （公众号：CoCo都可） ” 在微
+            信公众平台上运营的线上自助点单台， 您 （ “用户” ） 只需在手
+            机上简单操作即可实现免排队点单或预约点单。</text>
+        <view class='kong1'></view>
+        <text>您在使用此平台前应仔细阅读如下须知：</text>
+      </view>
+    </view>
+    <view class='xuzhititle'>
+      <text>1. 点单及取单</text>
+    </view>
+    <view class='xuzhitext'>
+      <view class='yuandian'></view>
+      <view class='text1'>
+        <text>您需要通过微信平台点单。</text>
+      </view>
+      <view class='kong'></view>
+      <view class='yuandian'></view>
+      <view class='text1'>
+        <text>点单时， 您可以选择立即取单或预约取单。 立即取单，点单时
+              您无需现场排队; 预约取单， 您可以指定取单时间，届时到店即
+              领饮品； 部分门店支持配送服务， 您可以在支持的配送范围内
+              选择收货地址， 等待在预计时间内送达； </text>
+      </view>
+      <view class='kong'></view>
+      <view class='yuandian'></view>
+      <view class='text1'>
+        <text>以到店方式下单的情况， 取单号可在微信-->小程序
+              -->“CoCo都可手机点单” -->订单-->我的订单中查阅</text>
+      </view>
+      <view class='kong'></view>
+      <view class='yuandian'></view>
+      <view class='text1'>
+        <text>以到店取单方式下单的情况， 您须于门店营业时间内完成
+              取单。</text>
+      </view>
+      <view class='xuzhititle'>
+        <text>2. 发票</text>
+      </view>
+      <view class='yuandian'></view>
+      <view class='text1'>
+        <text>您可于现场凭单据换取领发票</text>
+      </view>
+       <view class='xuzhititle'>
+        <text>3. 取消与退款</text>
+      </view>
+      <view class='yuandian'></view>
+      <view class='text1'>
+        <text>以到店取单方式下单的情况， 预约点单距取单时间15分钟前， 
+              您可以在手机端 “取消订单” 。 以送单上门的情况， 预约
+              送达时间前30分钟可以取消订单； 订单成功取消后， 相应
+              款项将在0-3个工作日返还； 逾期将不可取消及退款。 </text>
+      </view>
+
+    </view>
+  </view>
+  <view class='xuzhibuttom'>
+    <view class='xuzhiwenti'>
+      <text>常见问题</text>
+    </view>
+     <view class='xuzhititle'>
+        <text>Q1：平台适用场景是什么？</text>
+      </view>
+      <view class='text2'>
+        <text>场景一： 自助点单， 您可以免除现场排队困扰。</text>
+      </view>
+      <view class='kong2'></view>
+       <view class='text2'>
+        <text>场景二： 预约点单， 您可以在方便的时间到店领取饮品。</text>
+      </view>
+      <view class='kong2'></view>
+      <view class='text2'>
+        <text>场景三： 部分门店支持限定区域的配送， 您可以在支持的配送
+              范围内选择收货地址， 等待在预计时间内送达；</text>
+      </view>
+      <view class='xuzhititle'>
+        <text>Q2: 如何进入平台？</text>
+      </view>
+      <view class='text2'>
+        <text>场景一： 自助点单， 您可以免除现场排队困扰。</text>
+      </view>
+      <view class='kong2'></view>
+       <view class='text2'>
+        <text>场景二： 预约点单， 您可以在方便的时间到店领取饮品。</text>
+      </view>
+      <view class='xuzhititle'>
+        <text>Q3: 以到店取单方式下单的情况， 取单号如何查询？</text>
+      </view>
+       <view class='text2'>
+        <text>方式一： “CoCo都可” 手机点单平台-->订单-->我的订单</text>
+      </view>
+      <view class='kong2'></view>
+       <view class='text2'>
+        <text>方式二： 查询微信服务通知</text>
+      </view>
+      <view class='xuzhititle'>
+        <text>Q4: 可以委托他人代领饮品吗？</text>
+      </view>
+      <view class='text2'>
+        <text>A: 可以， 受托人可凭取单号至相应门店领取， 你需要妥善保管
+              您的取单号， 以免被他人冒领。 </text>
+      </view>
+       <view class='xuzhititle'>
+        <text>Q5: 可以隔日点单吗？ </text>
+      </view>
+       <view class='text2'>
+        <text>A: 当日门店营业结束后， 您可预约第二天的订单。 </text>
+      </view>
+  </view>
+  <view class='todiandan'>
+  <button class='diandan' bindtap='toDiandan'>
+    开始点单
+  </button>
+  </view>
+</view>

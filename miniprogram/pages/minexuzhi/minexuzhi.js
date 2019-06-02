@@ -7,6 +7,12 @@ Page({
   data: {
 
   },
+  toDiandan:function(e){
+    console.log('跳转首页点单！');
+    wx.switchTab({
+      url: '/pages/shouye/shouye',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

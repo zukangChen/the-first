@@ -7,7 +7,8 @@
     "pages/wallet/wallet",
     "pages/minejuan/minejuan",
     "pages/minexuzhi/minexuzhi",
-    "pages/minedizhi/minedizhi"
+    "pages/minedizhi/minedizhi",
+    "pages/mineshouji/shouji"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

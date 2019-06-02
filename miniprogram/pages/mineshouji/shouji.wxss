@@ -1,0 +1,143 @@
+/* miniprogram/pages/mineshouji/shouji.wxss */
+/*tab框切换*/
+.nav_tab{
+  width:100%;
+  height:80rpx;
+  display:flex;
+  flex-direction:row;
+  background: #f1f1f1;
+}
+.show{
+  line-height:60rpx;
+  text-align:center;
+  flex:1;
+  color:#999999;
+  font-size:28rpx;
+  opacity: 0.5;
+}
+.hidden{
+  line-height:60rpx;
+  text-align:center;
+  color:#f17c0e;
+  flex:1;
+  font-size:28rpx;
+}
+.nav_underline{
+  background:#f17c0e;
+  width:115rpx;
+  height:4rpx;
+  margin-top:-5rpx;
+  margin-left:130rpx;
+  border-radius:10rpx;
+}
+.main-bd{
+  /* height: 800rpx; */
+  width: 100%;
+}
+.cocoimg{
+  height: 250rpx;
+  width: 250rpx;
+  border-radius: 125rpx;
+  background: green;
+  margin:  0 250rpx 20rpx 250rpx;
+  overflow: hidden;
+}
+.kong{
+  height: 160rpx;
+}
+.cocoimg image{
+  width: 100%;
+  height: 100%;
+}
+.coconame{
+  height: 100rpx;
+  width: 100%;
+  text-align: center;
+  /* background: red; */
+  font-size: 30rpx;
+  color: #414141;
+}
+.main-tip{
+  width: 100%;
+}
+.triangle_border_up{
+    width:0;
+    height:0;
+    border-width:0 20px 20px;
+    border-style:solid;
+    border-color:transparent transparent #ffffff;/*透明 透明  白*/
+    margin:0 auto;
+    position:relative;
+}
+.tip-box{
+  height: 250rpx;
+  width: 650rpx;
+  margin: 0 50rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+  text-align: center;
+  padding-top: 100rpx;
+  font-size: 28rpx;
+  color: #414141;
+}
+.tongyibutton{
+  height: 100rpx;
+  width: 630rpx;
+  margin: 100rpx 60rpx;
+  background: #f17c0e;
+}
+.mineimg{
+  height: 250rpx;
+  width: 250rpx;
+  border-radius: 125rpx;
+  background: green;
+  margin:  0 250rpx 20rpx 250rpx;
+  overflow: hidden;
+}
+.kong1{
+  height: 60rpx;
+}
+.mineimg image{
+  width: 100%;
+  height: 100%;
+}
+.minename{
+  height: 100rpx;
+  width: 100%;
+  text-align: center;
+  /* background: red; */
+}
+.xinxi{
+  width: 100%;
+  padding: 20rpx 50rpx;
+  /* background: pink; */
+}
+.mingchen{
+  font-size: 25rpx;
+  color: #999999;
+  margin: 20rpx 0 0 10rpx;
+}
+.shoujihao{
+  width: 100%;
+  height: 80rpx;
+  font-size: 25rpx;
+  padding-left: 30rpx;
+  background: #cecece;
+  border-radius: 10rpx;
+}
+.yanzhengma{
+   width: 100%;
+  height: 80rpx;
+  font-size: 25rpx;
+  padding-left: 30rpx;
+  background: #cecece;
+  border-radius: 10rpx;
+}
+.quedinbutton{
+  height: 80rpx;
+  width: 650rpx;
+  margin: 100rpx 50rpx;
+  background: #f17c0e;
+  font-size: 28rpx;
+  color: #ffffff;
+}

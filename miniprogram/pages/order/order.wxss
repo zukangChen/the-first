@@ -22,6 +22,12 @@ page{
   background: #ffffff;
   margin:0 50rpx 50rpx 50rpx;
   border-radius: 10rpx;
+  text-align: center;
+}
+.kongorder text{
+  line-height: 400rpx;
+  color: #a0a0a0;
+  font-size: 35rpx;
 }
 .ordertip{
   padding: 180rpx 150rpx;
