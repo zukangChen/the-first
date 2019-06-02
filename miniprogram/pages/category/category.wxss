@@ -1,0 +1,107 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  width: 100%;
+  height: 100%;
+}
+.imgs{
+  width: 100%;
+  height: 20%;
+}
+.imgs image{
+  width: 100%;
+  height: 100%;
+}
+.container-buttom{
+  width: 100%;
+  height: 80%;
+  display: flex;
+}
+.category-left{
+  /* display: inline-block; */
+  float: left;
+  width: 140rpx;
+  height: 80%;
+  /* box-sizing: border-box;
+  border: 1px solid #000; */
+}
+.category-left .cate-list{
+  height: 103rpx;
+  line-height: 103rpx;
+  text-align: center;
+  border-left: 3px solid #fff;
+}
+.category-left .cate-list.on{
+  color: #AB956D;
+  border-color: #ff7e00;
+}
+.categroy-right{
+  float: right;
+  /* display: inline-block; */
+  width: 610rpx;
+  height: 95%;
+  box-sizing: border-box;
+  /* border: 1px solid #000; */
+  overflow: hidden;
+}
+.categroy-right .cate-box{
+  width: 100%;
+  height: 980rpx;
+  /* padding: 20rpx; */
+  box-sizing: border-box;
+  border: 1px solid #cfcfcf;
+  margin-top: 10rpx;
+  background-color: #cfcfcf;
+}
+.cate-list{
+  margin-top: 10rpx;
+  background-color: #fff;
+}
+.categroy-right .cate-box navigator{
+  border: 1px solid #cfcfcf;
+  
+}
+.weui-media-box__bd_in-appmsg{
+  width: 382rpx;
+  height: 120rpx;
+}
+.weui-media-box__hd_in-appmsg{
+ background-color: rgb(160, 179, 204);
+}
+.weui-media-box__title{
+  color: #000000;
+}
+.weui-media-box__desc{
+  color: #ff7e00;
+  margin-top: 20rpx; 
+}
+.sub{
+  float: right;
+  height: 50rpx;
+  width: 50rpx;
+  position: relative;
+  right: 90rpx;
+  top: -30rpx;
+}
+.number{
+  float: right;
+  position: relative;
+  font-size: 18px;
+  top: -32rpx;
+  right: 15rpx;
+}
+.add{
+  float: right;
+  position: relative;
+  height: 50rpx;
+  width: 50rpx;
+  top: -30rpx;
+  right: -60rpx;
+}
+.button{
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+}

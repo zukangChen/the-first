@@ -10,7 +10,7 @@
   </view>
   <view class="btn">
     <view class="order">
-      <button class="weui-btn" type="default" plain="true">按钮</button>
+      <button class="weui-btn" type="default" plain="true">自助点单</button>
     </view>
   </view>
   <view class="chooses">
@@ -22,7 +22,7 @@
                 <view class="weui-cell__bd">限时拼团</view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
             </navigator>
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <navigator url="../movie/movie" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__hd">
                     <image src="../../images/camera.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
                 </view>

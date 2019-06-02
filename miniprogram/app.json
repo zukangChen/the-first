@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/category/category",
     "pages/shouye/shouye",
     "pages/movie/movie",
     "pages/order/order",
