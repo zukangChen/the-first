@@ -1,18 +1,21 @@
 // miniprogram/pages/order/order.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    selectAllStatus: false,
+    totalPrice: 0,
     hid:true,
     orderlist:[
-      {
-        image:'/images/coco.png',
-        title:'coco奶茶',
-        number:'1',
-        price:'18'
-      }
+      // {
+      //   image:'/images/coco.png',
+      //   title:'coco奶茶',
+      //   number:'1',
+      //   price:'18'
+      // }
     ]
 
   },
@@ -23,9 +26,97 @@ Page({
     })
   },
   minusCount:function(e){
-    // let number = e.
+    let orderlist = this.data.orderlist;
+    const index = e.target.dataset.index;
+    let num = this.data.orderlist[index].number;
+    console.log(this.data.orderlist[index].number);
+    num -=1;
+    orderlist[index].number = num;
+    if (num == 0) {
+      orderlist.splice(index, 1)
+    }
+    if (this.data.orderlist.length == 0) {
+      this.setData({
+        hid: false
+      })
+    }
+    this.setData({
+      orderlist
+    })
   },
-  addCount:function(){
+  addCount:function(e){
+    let orderlist = this.data.orderlist;
+    const index = e.target.dataset.index;
+    let num = this.data.orderlist[index].number;
+    console.log(this.data.orderlist[index].number);
+    num += 1;
+   
+    orderlist[index].number = num;
+    this.setData({
+      orderlist
+    })
+  },
+  selectAll: function (e) {
+    let selectAllStatus = this.data.selectAllStatus;
+    selectAllStatus = !selectAllStatus;
+    let orderlist = this.data.orderlist;
+    for (let i = 0; i < orderlist.length; i++) {
+
+      orderlist[i].selected = selectAllStatus;
+    }
+    this.setData({
+      orderlist,
+      selectAllStatus,
+    })
+    this.getTotalPrice()
+  },
+  getTotalPrice: function (e) {
+    let orderlist = this.data.orderlist;
+    let total = 0;
+    for (let i = 0; i < orderlist.length; i++) {
+      if (orderlist[i].selected) {
+        total += (+orderlist[i].price * +orderlist[i].number);
+      }
+    }
+    // total=total.toFixed(1)
+    this.setData({
+      totalPrice: total
+    });
+  },
+  selectList: function (e) {
+    const index = e.currentTarget.dataset.index;
+    let orderlist = this.data.orderlist;
+    const selected = orderlist[index].selected;
+    orderlist[index].selected = !selected;
+    const a = [];
+    for (let i = 0; i < orderlist.length; i++) {
+      if (orderlist[i].selected) {
+        a.push(orderlist[index])
+      }
+    }
+    if (orderlist.length <= a.length) {
+      this.setData({
+        selectAllStatus: true, orderlist
+      });
+    } else {
+      this.setData({
+        selectAllStatus: false, orderlist
+      });
+    }
+    this.getTotalPrice()
+  },
+  deleteList:function(e){
+    const index = e.target.dataset.index;
+    let orderlist = this.data.orderlist;
+    orderlist.splice(index,1)
+    if (this.data.orderlist.length == 0) {
+      this.setData({
+        hid: false
+      })
+    }
+    this.setData({
+      orderlist
+    })
 
   },
 
@@ -33,7 +124,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      orderlist: app.globalData.foods
+    })
+    console.log(app.globalData.foods)
+    if (this.data.orderlist.length > 0) {
+      this.setData({
+        hid: true
+      })
+    }
+    
   },
 
   /**
@@ -47,6 +147,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    
 
   },
 
