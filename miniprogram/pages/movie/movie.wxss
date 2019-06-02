@@ -34,7 +34,7 @@
 
 .card {
   background: #fff;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
   transition: 0.5s all;
 }
 
@@ -72,4 +72,19 @@
 }
 .content{
   margin: 10rpx;
+}
+.description{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+
+}
+.control{
+  position: absolute;
+  right: 40rpx;
+  color: #cdcdcd;
+}
+.show{
+  -webkit-line-clamp: 6;
 }

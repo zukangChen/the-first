@@ -1,0 +1,51 @@
+<!--miniprogram/pages/mineshouji/shouji.wxml-->
+<view class="nav_title">
+  <view class="nav_tab">
+    <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}'wx:key='{{index}}' bindtap="selected">{{item}}
+      <view class="{{selected==index?'nav_underline':''}}"></view>
+    </view>
+  </view>
+  <!-- tab框显示内容 -->
+  <view wx:if="{{selected == 0}}" class='shouquanbd'>
+    <view class='main-bd'>
+      <view class='kong'></view>
+      <view class='cocoimg'>
+        <image src='/images/coco.png'></image>
+      </view>
+      <view class='coconame'>
+        <text>CoCo都可</text>
+      </view>
+    </view>
+
+    <view class='main-tip'>
+      <view class="triangle_border_up">
+      </view>
+      <view class='tip-box'>
+        <text>“CoCo手机点单” 申请获取你的手机号</text>
+      </view>
+    </view>
+
+      <button class='tongyibutton' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        同意
+      </button>
+
+  </view>
+  <view wx:if="{{selected == 1}}" class='mainbd'>
+    <view class='kong1'></view>
+    <view class='mineimg'>
+      <image src='{{avatarUrl}}'></image>
+    </view>
+    <view class='minename'>
+      <text>{{nickName}}</text>
+    </view>
+    <view class='xinxi'>
+      <text class='mingchen'>手机号</text>
+      <input class='shoujihao' value='18279247534' ></input>
+       <text class='mingchen'>用户名</text>
+      <input class='yanzhengma' placeholder='请输入验证码' ></input>
+    </view>
+     <button class='quedinbutton'>
+        确定
+      </button>
+  </view>
+</view>

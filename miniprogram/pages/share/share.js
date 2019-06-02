@@ -1,4 +1,4 @@
-// miniprogram/pages/minexuzhi/minexuzhi.js
+// miniprogram/pages/share/share.js
 Page({
 
   /**
@@ -6,12 +6,6 @@ Page({
    */
   data: {
 
-  },
-  toDiandan:function(e){
-    console.log('跳转首页点单！');
-    wx.switchTab({
-      url: '/pages/shouye/shouye',
-    })
   },
 
   /**

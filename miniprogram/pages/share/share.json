@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "CoCo影院",
+  "navigationBarTitleText": "乐活体验",
   "usingComponents": {
     "card2" : "../../components/card2/card2"
   }

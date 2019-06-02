@@ -7,8 +7,12 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+<<<<<<< HEAD
 		"autoAudits": false,
 		"checkInvalidKey": true
+=======
+		"autoAudits": false
+>>>>>>> 95e4c457ec07922480e18e74223b00453c83e355
 	},
 	"appid": "wx2415f630e8690871",
 	"projectname": "the-first",

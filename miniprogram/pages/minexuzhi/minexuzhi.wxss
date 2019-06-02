@@ -1,1 +1,103 @@
 /* miniprogram/pages/minexuzhi/minexuzhi.wxss */
+
+page {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  background: #f1f1f1;
+}
+
+.xuzhitop {
+  background: #fff;
+  width: 650rpx;
+  margin: 25rpx 50rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+
+.xuzhitext {
+  font-size: 21rpx;
+  color: #a0a0a0;
+}
+
+.xuzhitip {
+  padding: 15rpx 15rpx 0 15rpx;
+}
+
+.xuzhititle {
+  padding: 20rpx 0 20rpx 5rpx;
+  font-size: 25rpx;
+  color: #f17c0e;
+}
+
+.yuandian {
+  height: 20rpx;
+  width: 20rpx;
+  border-radius: 10rpx;
+  background: #a0a0a0;
+  float: left;
+  margin: 6rpx 10rpx 0 0;
+}
+
+.kong {
+  height: 50rpx;
+  width: 100%;
+}
+
+.kong1 {
+  height: 20rpx;
+  width: 100%;
+}
+
+.kong2 {
+  height: 30rpx;
+  width: 100%;
+}
+
+.text1 {
+  width: 600rpx;
+  margin-left: 30rpx;
+}
+
+.xuzhibuttom {
+  background: #fff;
+  width: 650rpx;
+  margin: 25rpx 50rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+
+.xuzhiwenti {
+  font-size: 26rpx;
+  text-align: center;
+  width: 100%;
+  color: #a0a0a0;
+  margin: 15rpx 0 0 0;
+}
+
+.text2 {
+  width: 600rpx;
+  margin-left: 20rpx;
+  font-size: 21rpx;
+  color: #a0a0a0;
+}
+
+.todiandan {
+  height: 150rpx;
+  /* background: green; */
+  width: 650rpx;
+  margin: 25rpx 50rpx;
+  padding: 50rpx 0;
+}
+
+.diandan {
+  width: 200rpx;
+  float: right;
+  font-size: 30rpx;
+  background: #f17c0e;
+  color: #fff;
+}
