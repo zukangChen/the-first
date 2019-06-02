@@ -9,7 +9,12 @@
 
 },
   "pages": [
+<<<<<<< HEAD
     "pages/location/location",
+=======
+       
+    "pages/shouye/shouye",
+>>>>>>> 181edca408645d0803ac2a2c1335cdce58e5a5a8
     "pages/movie/movie",
     "pages/shouye/shouye",
     "pages/order/order",
@@ -18,10 +23,14 @@
     "pages/minejuan/minejuan",
     "pages/minexuzhi/minexuzhi",
     "pages/minedizhi/minedizhi",
+<<<<<<< HEAD
     "pages/explore/explore",
     "pages/share/share",
     "pages/transmit/transmit"
     
+=======
+    "pages/mineshouji/shouji"
+>>>>>>> 181edca408645d0803ac2a2c1335cdce58e5a5a8
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

@@ -1,9 +1,18 @@
-<view class="container">
-  <view class="img">
-    <image src="../../images/coco.png" class="coco"></image>
-    <text class="title"></text>
+<view class='main'>
+  <view class='kong'></view>
+  <view class='cocoimg'>
+    <image src='/images/minemoney.png'></image>
   </view>
-  <view class="content">
-    <text></text>
+  <view class='coconame'>
+    <text>CoCo钱包</text>
   </view>
+  <view class='moneynumber'>
+    <text>￥ 102.5</text>
+  </view>
+  <button class='chongzhi'>
+    充值
+  </button>
+  <button class='tixian'>
+    提现
+  </button>
 </view>
