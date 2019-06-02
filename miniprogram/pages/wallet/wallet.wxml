@@ -7,12 +7,12 @@
     <text>CoCo钱包</text>
   </view>
   <view class='moneynumber'>
-    <text>￥ 102.5</text>
+    <text>￥ 0.00</text>
   </view>
-  <button class='chongzhi'>
+  <button class='chongzhi' bindtap='tip'>
     充值
   </button>
-  <button class='tixian'>
+  <button class='tixian' bindtap='tip' >
     提现
   </button>
 </view>

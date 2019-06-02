@@ -48,7 +48,7 @@ height: 160rpx;
   left: 300rpx;
   top: 50rpx;
   overflow: hidden;
-  font-size: 40rpx;
+  font-size: 34rpx;
   color: red;
 }
 .orderlist .cart-pro-price{

@@ -5,6 +5,8 @@ var QQMapWX = require('../../libs/qqmap-wx-jssdk.js');
 var qqmap = new QQMapWX({ key: 'ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU' });
 Page({
   data: {
+    distance :[],
+    value:'',
     info:[],
     addInfo: '',
     cur: 0,
@@ -19,16 +21,81 @@ Page({
       cur: 1
     })
   },
+  //点击跳到选择饮品页面
+  order(e){
+    wx.navigateTo({
+      url: '../category/category'
+    })
+  },
   search(e) {
-    //搜索
+    let that = this;
+    //获取搜索的地址信息
     wx.request({
-      url: 'https://apis.map.qq.com/ws/place/v1/suggestion/?region=江西省南昌市广兰大道&keyword=CoCo奶茶&key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU', //仅为示例，并非真实的接口地址
+      url:'https://apis.map.qq.com/ws/geocoder/v1/?key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU&address='+that.data.value,
       data: {
-
       },
       success(res) {
         console.log(res)
+        that.setData({
+          lng : res.data.result.location.lng,
+          lat : res.data.result.location.lat
+        })
+        console.log(that.data.lng);
+        console.log(that.data.lat)
       }
+    })
+    //搜索附近的奶茶店
+    setTimeout(function(){
+      wx.request({
+      
+        url:'https://apis.map.qq.com/ws/place/v1/search?page_size=5&page_index=1&keyword=CoCo奶茶&orderby=_distance&key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU&boundary='+'nearby('+ that.data.lat +','+ that.data.lng +','+'1000)',
+        // url:`https://apis.map.qq.com/ws/place/v1/search?page_size=10&page_index=1&keyword=CoCo奶茶&orderby=_distance&key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU&boundary=nearby(that.data.lat,that.data.lng,1000)`,
+        data: {
+  
+        },
+        success(res) {
+          // console.log(that.data.lng);
+          // console.log(that.data.lat)
+          // console.log(res)
+          that.setData({
+            info:res.data.data
+          })
+        }
+      })
+    },1000)
+    //算出两地之间的距离
+    setTimeout(function () {
+      let dis = []
+      for (let i=0 ; i< that.data.info.length; i++){
+        let lat = that.data.info[i].location.lat;
+        let lng = that.data.info[i].location.lng;
+        wx.request({
+          // url:'https://apis.map.qq.com/ws/place/v1/search?page_size=10&page_index=1&keyword=CoCo奶茶&orderby=_distance&key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU&boundary='+'nearby('+ that.data.lat +','+ that.data.lng +','+'1000)',
+          url:'https://apis.map.qq.com/ws/distance/v1/?mode=driving&key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU&from='+that.data.lat+','+that.data.lng + '&to='+lat+','+lng,
+          data: {
+    
+          },
+          success(res) {
+            console.log(res)
+            let distance = res.data.result.elements[0].distance;
+            console.log(distance);
+            // let distance = [] ;
+            dis.push(distance);
+            console.log(dis);
+            that.setData({
+              distance : dis
+            })
+          }
+        })
+       }
+    }, 2000);
+   
+  },
+  //获取输入框的内容
+  find (e){
+    // console.log(e)
+    this.setData({
+      value : e.detail.value
     })
   },
   onLoad: function () {
@@ -47,7 +114,7 @@ Page({
           success: function (res) {
             console.log(res);
             that.setData({
-              addInfo: res
+              addInfo: res.result
             })
             console.log(that.data.addInfo);
           },
@@ -64,16 +131,46 @@ Page({
     })
     //搜索
     wx.request({
-      url: 'https://apis.map.qq.com/ws/place/v1/suggestion/?region=江西省南昌市广兰大道&keyword=CoCo奶茶&key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU', //仅为示例，并非真实的接口地址
+      url: 'https://apis.map.qq.com/ws/place/v1/suggestion/?page_size=5&page_index=1&region=江西省南昌市广兰大道&keyword=CoCo奶茶&key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU', //仅为示例，并非真实的接口地址
       data: {
 
       },
       success(res) {
+        console.log(res)
         that.setData({
           info : res.data.data
         })
         console.log(that.data.info)
       }
     })
+
+       //算出两地之间的距离
+       setTimeout(function () {
+         console.log(that.data.info)
+        let dis = []
+        for (let i=0 ; i< that.data.info.length; i++){
+          let lat = that.data.info[i].location.lat;
+          let lng = that.data.info[i].location.lng;
+          wx.request({
+            // url:'https://apis.map.qq.com/ws/place/v1/search?page_size=10&page_index=1&keyword=CoCo奶茶&orderby=_distance&key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU&boundary='+'nearby('+ that.data.lat +','+ that.data.lng +','+'1000)',
+            url:'https://apis.map.qq.com/ws/distance/v1/?mode=driving&key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU&from='+that.data.addInfo.location.lat+','+that.data.addInfo.location.lng + '&to='+lat+','+lng,
+            data: {
+      
+            },
+            success(res) {
+              console.log(res)
+              let distance = res.data.result.elements[0].distance;
+              console.log(distance);
+              // let distance = [] ;
+              dis.push(distance);
+              console.log(dis);
+              that.setData({
+                distance : dis
+              })
+            }
+          })
+         }
+      }, 1500);
+
   }
 })

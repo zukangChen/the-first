@@ -8,7 +8,8 @@ Page({
   data: {
     selectAllStatus: false,
     totalPrice: 0,
-    hid:true,
+    flag: false,
+    hid:false,
     orderlist:[
       // {
       //   image:'/images/coco.png',
@@ -37,7 +38,7 @@ Page({
     }
     if (this.data.orderlist.length == 0) {
       this.setData({
-        hid: false
+        flag: false
       })
     }
     this.setData({
@@ -111,7 +112,7 @@ Page({
     orderlist.splice(index,1)
     if (this.data.orderlist.length == 0) {
       this.setData({
-        hid: false
+        flag: false
       })
     }
     this.setData({
@@ -119,20 +120,34 @@ Page({
     })
 
   },
-
+  fff(){
+    let orderlist = app.globalData.foods
+    console.log(orderlist.length)
+    if(orderlist.length > 0){
+      console.log(orderlist.length)
+      this.setData({
+        flag: true,
+        orderlist
+      })
+      console.log(this.data.flag)
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      orderlist: app.globalData.foods
-    })
-    console.log(app.globalData.foods)
-    if (this.data.orderlist.length > 0) {
-      this.setData({
-        hid: true
-      })
-    }
+    // this.setData({
+    //   orderlist: app.globalData.foods
+    // })
+    // console.log("----",app.globalData.foods)
+    // if (this.data.orderlist.length > 0) {
+    //   console.log(this.data.orderlist.length)
+    //   this.setData({
+    //     hid: true
+    //   })
+    // }
+
+    // this.fff()
     
   },
 
@@ -147,6 +162,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.fff()
     
 
   },

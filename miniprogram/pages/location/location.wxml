@@ -2,7 +2,7 @@
 <view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}px;">
   <view class="search-form round">
     <text class="cuIcon-search"></text>
-    <input type="text" placeholder="{{addInfo.result.address}}" confirm-type="search"></input>
+    <input type="text" placeholder="{{addInfo.address}}" confirm-type="search" bindblur="find"></input>
   </view>
   <view class="action" bindtap="search">
     <button class="cu-btn bg-gradual-green shadow-blur round" >搜索</button>
@@ -27,9 +27,9 @@
     <view class="top">
       <view class="icon"></view>
       <view class="shopName">{{item.title}}</view>
-      <view class="long">2.18km</view>
+      <view class="long">{{distance[index]}}m</view>
     </view>
-    <view class="address">南昌市</view>
+    <view class="address">{{item.address}}</view>
     <view class="middle">
       <view class="get">到店自提:</view>
       <view class="detail">门店详情</view>
@@ -45,6 +45,6 @@
       <view class="shopName">稍后,预约稍晚到店取单</view>
       <view class="long">2.18km</view>
     </view>
-    <view class="button">选择饮品</view>
+    <view class="button" bindtap ="order">选择饮品</view>
   </view>
 </view>

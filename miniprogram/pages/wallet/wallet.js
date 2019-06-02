@@ -7,7 +7,13 @@ Page({
   data: {
 
   },
-
+  tip:function(e){
+    wx.showModal({
+      title: '提示',
+      content: '暂未开放此功能！敬请期待...',
+      showCancel:false
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
