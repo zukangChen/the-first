@@ -5,11 +5,10 @@
     }
   },
   "pages": [
-
+    "pages/shouye/shouye",
     "pages/location/location",
     "pages/movie/movie",
     "pages/order/order",
-    "pages/shouye/shouye",
     "pages/category/category",
     "pages/mine/mine",
     "pages/wallet/wallet",

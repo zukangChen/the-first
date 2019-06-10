@@ -21,7 +21,7 @@ Page({
   },
   goOrder(){
     wx.navigateTo({
-      url: '../category/category'
+      url: '../location/location'
     })
   },
 

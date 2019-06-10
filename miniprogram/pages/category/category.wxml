@@ -30,7 +30,7 @@
       </block>
     </scroll-view>
     <view class="button" bindtap="goPay">
-      <button class="weui-btn mini-btn" type="warn" size="mini">去结算</button>
+      <button class="weui-btn mini-btn" type="warn" size="mini" bindtap='toorder'>去结算</button>
     </view>
   </view>
 </view>

@@ -75,6 +75,11 @@ Page({
     }
     
   },
+  toorder:function(e){
+    wx.switchTab({
+      url: '/pages/order/order',
+    })
+  },
 
   switchTab(e){
     let id = e.target.dataset.id

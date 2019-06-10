@@ -1,12 +1,12 @@
 <!--miniprogram/pages/order/order.wxml-->
-<view class='main'>
+<view class='main' wx:if="{{flag}}">
   <view class='orderlist' wx:for="{{orderlist}}" wx:key="{{item}}">
     <icon wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}" class="cart-pro-select" bindtap="selectList" />
     <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}" bindtap="selectList" />
     <navigator class="cart-pro-goods" url="../details/details?id={{item.id}}">
-      <image cl ass="cart-thumb" src="{{item.image}}"></image>
+      <image cl ass="cart-thumb" src="{{item.thumb}}"></image>
     </navigator>
-    <text class="cart-pro-name">{{item.title}}</text>
+    <text class="cart-pro-name">{{item.name}}</text>
     <text class="cart-pro-price">￥{{item.price}}</text>
     <view class="cart-count-box">
       <text class="cart-count-down" bindtap="minusCount" data-index="{{index}}">-</text>
@@ -14,9 +14,20 @@
       <text class="cart-count-add" bindtap="addCount" data-index="{{index}}">+</text>
     </view>
     <text class="cart-del" bindtap="deleteList" data-index="{{index}}">x</text>
-  </view>
+    <view class="cart-footer">
+      <icon wx:if="{{selectAllStatus}}" type="success_circle" class="total-select" color="red" bindtap="selectAll" />
+      <icon wx:else type="circle" class="total-select" color="#010" bindtap="selectAll" />
+      <text class="selAl">全选</text>
+      <text class="cart-total-price">合计:</text>
+      <text class="pricCount">{{totalPrice}}元</text>
+      <text class="pay">结算{{totalPrice}}元</text>
+    </view>
 
-  <view class='kongorder-box {{hid? "hidden" : ""}}'>
+  </view>
+</view>
+
+<view wx:else>
+   <view class='kongorder-box'>
     <view class='kong'></view>
     <view class='kongorder'>
       <text>暂无订单信息</text>
@@ -29,3 +40,4 @@
     </view>
   </view>
 </view>
+ 
