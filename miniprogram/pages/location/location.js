@@ -48,8 +48,8 @@ Page({
     setTimeout(function(){
       wx.request({
       
-        url:'https://apis.map.qq.com/ws/place/v1/search?page_size=5&page_index=1&keyword=CoCo奶茶&orderby=_distance&key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU&boundary='+'nearby('+ that.data.lat +','+ that.data.lng +','+'1000)',
-        // url:`https://apis.map.qq.com/ws/place/v1/search?page_size=10&page_index=1&keyword=CoCo奶茶&orderby=_distance&key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU&boundary=nearby(that.data.lat,that.data.lng,1000)`,
+        // url:'https://apis.map.qq.com/ws/place/v1/search?page_size=5&page_index=1&keyword=CoCo奶茶&orderby=_distance&key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU&boundary='+'nearby('+ that.data.lat +','+ that.data.lng +','+'1000)',
+        url:`https://apis.map.qq.com/ws/place/v1/search?page_size=10&page_index=1&keyword=CoCo奶茶&orderby=_distance&key=ENIBZ-757CQ-Z2Z5G-GZO3F-T25GK-N2BSU&boundary=nearby(${that.data.lat},${that.data.lng},1000)`,
         data: {
   
         },
